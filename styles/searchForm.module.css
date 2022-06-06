@@ -1,0 +1,62 @@
+.search {
+    height: 280px;
+    padding-top: 30px;
+    padding-bottom: 128px;
+    background-image: url('../public/images/pattern-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    width: 100%;
+    font-size: 31px;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 26px;
+}
+
+.form {
+    text-align: center;
+}
+
+.form label {
+    position: relative;
+    height: 60px;
+}
+
+.form input {
+    width: 39%;
+    min-width: 330px;
+    height: 60px;
+    padding: 0 1.5rem;
+    font-size: 18px;
+    border-radius: 16px;
+    border: none;
+    background-color: white;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.form button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    right: 0;
+    top: -20px;
+    background-color: black;
+    border-radius: 0 16px 16px 0;
+    -webkit-border-radius: 0 16px 16px 0;
+    -moz-border-radius: 0 16px 16px 0;
+    -ms-border-radius: 0 16px 16px 0;
+    -o-border-radius: 0 16px 16px 0;
+}
