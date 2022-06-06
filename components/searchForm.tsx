@@ -5,6 +5,7 @@ import * as yup from "yup";
 
 import styles from "../styles/searchForm.module.css";
 import { IData } from "../pages";
+import { api } from "../utils/api";
 
 interface IProps {
   title: string;
@@ -44,15 +45,13 @@ const SearchForm = ({ title, setData }: IProps) => {
       ? "ipAddress"
       : "domain";
     setIsLoading(true);
-    fetch(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=at_sS1eXKFqU4w6Mtk9gXsuvHTywPDdw&${queryType}=${searchQuery}`
+    api<IData>(
+      `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.NEXT_PUBLIC_API_KEY}&${queryType}=${searchQuery}`
     )
-      .then((res) => res.json())
       .then(({ ip, location, isp }) => {
         setData({ ip, location, isp });
-        setIsLoading(false);
       })
-      .catch((err) => new Error(err));
+      .finally(() => setIsLoading(false));
   };
 
   return (
