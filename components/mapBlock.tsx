@@ -1,21 +1,31 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
 import L from "leaflet";
 
 import styles from "../styles/map.module.css";
 import "leaflet/dist/leaflet.css";
+
+interface ILatLng {
+  lat: number;
+  lng: number;
+}
 
 const myIcon = L.icon({
   iconUrl: "./images/icon-location.svg",
   iconAnchor: [23, 56],
 });
 
-const MapBlock = ({ lat, lng }: { lat: number; lng: number }) => {
-  console.log(lat, lng);
+const MapUpdater = (latLng: ILatLng) => {
+  const map = useMap();
+  map.flyTo(latLng);
+  return <></>;
+};
+
+const MapBlock = ({ lat, lng }: ILatLng) => {
   return (
     <MapContainer
       className={styles["map-container"]}
       center={[lat, lng]}
-      zoom={9}
+      zoom={10}
       scrollWheelZoom={false}
     >
       <TileLayer
@@ -23,6 +33,7 @@ const MapBlock = ({ lat, lng }: { lat: number; lng: number }) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={[lat, lng]} icon={myIcon} />
+      <MapUpdater lat={lat} lng={lng} />
     </MapContainer>
   );
 };
