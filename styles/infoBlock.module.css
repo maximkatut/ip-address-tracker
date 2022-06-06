@@ -17,11 +17,18 @@
 .info-wrapper {
     display: flex;
     flex-wrap: wrap;
+    padding: 36px 0;
+    height: 100%;
 }
 
 .info-item {
     width: 25%;
-    padding: 36px 32px;
+    padding: 0px 32px;
+    border-left: 1px solid rgba(0,0,0,0.2);
+}
+
+.info-item:first-child {
+    border-left: none;
 }
 
 .info-item h3 {
