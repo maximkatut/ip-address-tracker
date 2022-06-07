@@ -24,7 +24,7 @@ const MapBlock = ({ lat, lng }: ILatLng) => {
   return (
     <MapContainer
       className={styles["map-container"]}
-      center={[lat, lng]}
+      center={[lat + 1, lng]}
       zoom={10}
       scrollWheelZoom={false}
     >
@@ -33,7 +33,7 @@ const MapBlock = ({ lat, lng }: ILatLng) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={[lat, lng]} icon={myIcon} />
-      <MapUpdater lat={lat} lng={lng} />
+      <MapUpdater lat={lat + 0.05} lng={lng} />
     </MapContainer>
   );
 };

@@ -1,10 +1,12 @@
 
 .info {
-    position: relative;
+    position: absolute;
     z-index: 1;
     width: 77%;
-    height: 160px;
     margin: 0 auto;
+    left: 0;
+    right: 0;
+    max-width: 1440px;
     margin-top: -80px;
     border-radius: 16px;
     background-color: white;
@@ -17,7 +19,7 @@
 .info-wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding: 36px 0;
+    padding: 41.25px 0;
     height: 100%;
 }
 
@@ -41,4 +43,41 @@
 .info-item p {
     font-size: 26px;
     font-weight: 500;
+}
+
+@media only screen and (max-width: 1200px) {
+    .info-item {
+        width: 50%;
+        border-left: none;
+        height: 100px;
+    }
+  }
+
+@media only screen and (max-width: 799px) {
+    .info {
+        width: 88%;
+        margin-top: -114px;
+    }
+    .info-wrapper {
+        padding: 28px;
+    }
+    .info-item {
+        height: auto;
+        text-align: center;
+        width: 100%;
+        border-left: none;
+        margin-bottom: 26px;
+    }
+    .info-item:last-child {
+        margin-bottom: 0;
+    }
+    .info-item h3 {
+        letter-spacing: normal;
+        margin-bottom: 10px;
+    }
+
+    .info-item p {
+        font-size: 18px;
+        font-weight: 700;
+    }
 }

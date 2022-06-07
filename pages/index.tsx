@@ -43,7 +43,7 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         <p className={styles.description}>
-          Developed by <a href="https://maxbaravy.com">Max Baravy</a>
+          Developed with ❤️ by <a href="https://maxbaravy.com">Max Baravy</a>
         </p>
       </footer>
     </div>

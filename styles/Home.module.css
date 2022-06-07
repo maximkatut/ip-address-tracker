@@ -4,6 +4,10 @@
     height: 100vh;
 }
 
+.main {
+    position: relative;
+}
+
 .footer {
     margin-top: 3px;
     text-align: center;
@@ -17,4 +21,8 @@
 .footer a:hover {
     text-decoration-line: underline;
     -moz-text-decoration-line: underline;
+}
+
+.footer .description {
+    font-size: 12px;
 }

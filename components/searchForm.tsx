@@ -67,7 +67,7 @@ const SearchForm = ({ title, setData }: IProps) => {
             {...register("searchQuery", { required: true })}
             required
             type="text"
-            placeholder="Search for any IP address or domain"
+            placeholder="Search for any IP or domain"
             disabled={isLoading}
           />
           {errors.searchQuery && (
