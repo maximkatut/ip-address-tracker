@@ -1,0 +1,28 @@
+.container {
+    background-color: rgb(240,240,244);
+    width: 100vw;
+    height: 100vh;
+}
+
+.main {
+    position: relative;
+}
+
+.footer {
+    margin-top: 3px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer a {
+    color: blue;
+}
+
+.footer a:hover {
+    text-decoration-line: underline;
+    -moz-text-decoration-line: underline;
+}
+
+.footer .description {
+    font-size: 12px;
+}
