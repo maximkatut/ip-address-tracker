@@ -62,7 +62,7 @@ const SearchForm = ({ title, setData }: IProps) => {
         name="form"
         className={styles.form}
       >
-        <label>
+        <div className={styles["input-wrapper"]}>
           <input
             {...register("searchQuery", { required: true })}
             required
@@ -105,7 +105,7 @@ const SearchForm = ({ title, setData }: IProps) => {
               </svg>
             )}
           </button>
-        </label>
+        </div>
       </form>
     </section>
   );

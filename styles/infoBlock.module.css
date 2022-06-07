@@ -33,7 +33,7 @@
     border-left: none;
 }
 
-.info-item h3 {
+.info-item h2 {
     font-size: 12px;
     margin-bottom: 12px;
     opacity: 50%;
@@ -71,7 +71,7 @@
     .info-item:last-child {
         margin-bottom: 0;
     }
-    .info-item h3 {
+    .info-item h2 {
         letter-spacing: normal;
         margin-bottom: 10px;
     }

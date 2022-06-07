@@ -8,21 +8,21 @@ const InfoBlock = ({ data }: { data: IData }) => {
     <section className={styles.info}>
       <div className={styles["info-wrapper"]}>
         <div className={styles["info-item"]}>
-          <h3>IP ADDRESS</h3>
+          <h2>IP ADDRESS</h2>
           <p>{ip}</p>
         </div>
         <div className={styles["info-item"]}>
-          <h3>LOCATION</h3>
+          <h2>LOCATION</h2>
           <p>
             {city}, {region} {postalCode}
           </p>
         </div>
         <div className={styles["info-item"]}>
-          <h3>TIMEZONE</h3>
+          <h2>TIMEZONE</h2>
           <p>UTC {timezone}</p>
         </div>
         <div className={styles["info-item"]}>
-          <h3>ISP</h3>
+          <h2>ISP</h2>
           <p>{isp}</p>
         </div>
       </div>
