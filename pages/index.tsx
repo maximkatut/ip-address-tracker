@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -7,6 +7,7 @@ import { initialState } from "../const";
 import SearchForm from "../components/searchForm";
 import InfoBlock from "../components/infoBlock";
 import styles from "../styles/home.module.css";
+import { detectAdBlock } from "../utils/adBlockerChecker";
 
 const title = "IP Address Tracker";
 
@@ -26,9 +27,18 @@ export interface IData {
 }
 
 const Home: NextPage = () => {
+  const [isAdBlock, setIsAdBlock] = useState<boolean>(false);
+  useEffect(() => {
+    detectAdBlock().then((isAdBlock) => {
+      setIsAdBlock(isAdBlock);
+    });
+  }, []);
   const [data, setData] = useState<IData>(initialState);
   return (
     <div className={styles.container}>
+      {isAdBlock && (
+        <div className={styles.popup}>Please, turn off AdBlocker!</div>
+      )}
       <Head>
         <title>{title}</title>
         <meta name="description" content={title} />
