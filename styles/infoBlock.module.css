@@ -1,83 +1,83 @@
-
 .info {
-    position: absolute;
-    z-index: 1;
-    width: 77%;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    max-width: 1440px;
-    margin-top: -80px;
-    border-radius: 16px;
-    background-color: white;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
+  position: absolute;
+  z-index: 1;
+  width: 77%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  max-width: 1440px;
+  margin-top: -80px;
+  border-radius: 16px;
+  background-color: white;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
 }
 
 .info-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 41.25px 0;
-    height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 41.25px 0;
+  height: 100%;
 }
 
 .info-item {
-    width: 25%;
-    padding: 0px 32px;
-    border-left: 1px solid rgba(0,0,0,0.2);
+  width: 25%;
+  padding: 0px 32px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .info-item:first-child {
-    border-left: none;
+  border-left: none;
 }
 
 .info-item h2 {
-    font-size: 12px;
-    margin-bottom: 12px;
-    opacity: 50%;
-    letter-spacing: 1.5px;
+  font-size: 12px;
+  margin-bottom: 12px;
+  opacity: 50%;
+  letter-spacing: 1.5px;
 }
 
 .info-item p {
-    font-size: 26px;
-    font-weight: 500;
+  font-size: 26px;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 1200px) {
-    .info-item {
-        width: 50%;
-        border-left: none;
-        height: 100px;
-    }
+  .info-item {
+    width: 50%;
+    border-left: none;
+    height: 100px;
   }
+}
 
 @media only screen and (max-width: 799px) {
-    .info {
-        width: 88%;
-        margin-top: -114px;
-    }
-    .info-wrapper {
-        padding: 28px;
-    }
-    .info-item {
-        height: auto;
-        text-align: center;
-        width: 100%;
-        border-left: none;
-        margin-bottom: 26px;
-    }
-    .info-item:last-child {
-        margin-bottom: 0;
-    }
-    .info-item h2 {
-        letter-spacing: normal;
-        margin-bottom: 10px;
-    }
+  .info {
+    width: 88%;
+    margin-top: -114px;
+  }
+  .info-wrapper {
+    padding: 28px;
+  }
+  .info-item {
+    height: auto;
+    text-align: center;
+    width: 100%;
+    border-left: none;
+    margin-bottom: 26px;
+  }
+  .info-item:last-child {
+    margin-bottom: 0;
+  }
+  .info-item h2 {
+    letter-spacing: normal;
+    margin-bottom: 10px;
+  }
 
-    .info-item p {
-        font-size: 18px;
-        font-weight: 700;
-    }
+  .info-item p {
+    font-size: 18px;
+    font-weight: 700;
+  }
 }
